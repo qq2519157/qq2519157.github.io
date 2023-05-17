@@ -3,8 +3,8 @@
     <channel>
         <title>Logan</title>
         <subtitle>不忘初心，方得始终</subtitle>
-        <icon>http://example.com/images/favicon.ico</icon>
-        <link>http://example.com</link>
+        <icon>https://qq2519157.github.io/images/favicon.ico</icon>
+        <link>https://qq2519157.github.io</link>
         <author>
           <name>Logan</name>
         </author>
@@ -13,12 +13,12 @@
         <pubDate>Fri, 14 Apr 2023 18:02:55 +0800</pubDate>
         <lastBuildDate>Fri, 14 Apr 2023 18:02:55 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">http://example.com/2023/04/14/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2023/04/14/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</guid>
             <title>无感重载Activity</title>
-            <link>http://example.com/2023/04/14/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="Activity" scheme="http://example.com/tags/Activity/" />
-            <category term="重载" scheme="http://example.com/tags/%E9%87%8D%E8%BD%BD/" />
+            <link>https://qq2519157.github.io/2023/04/14/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="Activity" scheme="https://qq2519157.github.io/tags/Activity/" />
+            <category term="重载" scheme="https://qq2519157.github.io/tags/%E9%87%8D%E8%BD%BD/" />
             <pubDate>Fri, 14 Apr 2023 18:02:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;开发时偶尔会遇到需要重载界面的情况，但是单纯的 &lt;code&gt;finish&lt;/code&gt;  会有动画，导致 APP 展现很突兀。&lt;/p&gt;
@@ -28,11 +28,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/04/04/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2023/04/04/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</guid>
             <title>悬浮窗权限获取</title>
-            <link>http://example.com/2023/04/04/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="权限" scheme="http://example.com/tags/%E6%9D%83%E9%99%90/" />
+            <link>https://qq2519157.github.io/2023/04/04/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="权限" scheme="https://qq2519157.github.io/tags/%E6%9D%83%E9%99%90/" />
             <pubDate>Tue, 04 Apr 2023 17:54:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;做一个应用 Log 的实时显示，发现需要用到 &lt;code&gt;SYSTEM_ALERT_WINDOW&lt;/code&gt;  权限，视同通用方式获取后发现并不行。&lt;/p&gt;
@@ -56,12 +56,12 @@
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Settings&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;canDrawOverlays&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;AlertDialog&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Builder&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setTitle&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;提示&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setMessage&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;显示Log需要在设置中打开系统悬浮窗权限，是否打开？&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setPositiveButton&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;确定&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dialog&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; which&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                        &lt;span class=&#34;token class-name&#34;&gt;LoginActivityPermissionsDispatcher&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;checkSystemAlertPermissionWithPermissionCheck&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                        dialog&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;dismiss&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setNegativeButton&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;取消&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dialog&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; which&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                        dialog&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;dismiss&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/03/23/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2023/03/23/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</guid>
             <title>Bitmap操作像素</title>
-            <link>http://example.com/2023/03/23/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="bitmap" scheme="http://example.com/tags/bitmap/" />
-            <category term="像素" scheme="http://example.com/tags/%E5%83%8F%E7%B4%A0/" />
+            <link>https://qq2519157.github.io/2023/03/23/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="bitmap" scheme="https://qq2519157.github.io/tags/bitmap/" />
+            <category term="像素" scheme="https://qq2519157.github.io/tags/%E5%83%8F%E7%B4%A0/" />
             <pubDate>Thu, 23 Mar 2023 13:45:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;最近在做公司项目时，需要对 bitmap 重新计算像素点颜色，在 &lt;code&gt;onDraw()&lt;/code&gt;  中处理时，记录了以下方法。&lt;/p&gt;
@@ -79,11 +79,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/02/09/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2023/02/09/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</guid>
             <title>ADB命令简单使用</title>
-            <link>http://example.com/2023/02/09/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="adb" scheme="http://example.com/tags/adb/" />
+            <link>https://qq2519157.github.io/2023/02/09/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="adb" scheme="https://qq2519157.github.io/tags/adb/" />
             <pubDate>Thu, 09 Feb 2023 11:18:55 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;查看当前连接的设备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看当前连接的设备&#34;&gt;#&lt;/a&gt; 查看当前连接的设备&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -174,12 +174,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2023/01/08/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2023/01/08/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/</guid>
             <title>Monterey屏蔽更新</title>
-            <link>http://example.com/2023/01/08/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/</link>
-            <category term="折腾" scheme="http://example.com/categories/%E6%8A%98%E8%85%BE/" />
-            <category term="Mac" scheme="http://example.com/tags/Mac/" />
-            <category term="屏蔽更新" scheme="http://example.com/tags/%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/" />
+            <link>https://qq2519157.github.io/2023/01/08/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/</link>
+            <category term="折腾" scheme="https://qq2519157.github.io/categories/%E6%8A%98%E8%85%BE/" />
+            <category term="Mac" scheme="https://qq2519157.github.io/tags/Mac/" />
+            <category term="屏蔽更新" scheme="https://qq2519157.github.io/tags/%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/" />
             <pubDate>Sun, 08 Jan 2023 13:11:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;最近系统更新到 Ventura，各种用着用着转圈圈，必须重启才能恢复正常，于是一怒之下重新安装了 Monterey，没有 Time Machine 备份，过程很难受。安装好后我们将系统升级屏蔽掉。&lt;/p&gt;
@@ -273,11 +273,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/11/21/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/11/21/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</guid>
             <title>APK手动签名</title>
-            <link>http://example.com/2022/11/21/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="签名" scheme="http://example.com/tags/%E7%AD%BE%E5%90%8D/" />
+            <link>https://qq2519157.github.io/2022/11/21/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="签名" scheme="https://qq2519157.github.io/tags/%E7%AD%BE%E5%90%8D/" />
             <pubDate>Mon, 21 Nov 2022 13:14:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;最近发现新版本的 Android studio 打包 apk 时没有 V1 证书和 V2 证书选项了&lt;/p&gt;
@@ -313,12 +313,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/11/11/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/11/11/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</guid>
             <title>Android签名证书转换</title>
-            <link>http://example.com/2022/11/11/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="Android studio" scheme="http://example.com/tags/Android-studio/" />
-            <category term="证书" scheme="http://example.com/tags/%E8%AF%81%E4%B9%A6/" />
+            <link>https://qq2519157.github.io/2022/11/11/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="Android studio" scheme="https://qq2519157.github.io/tags/Android-studio/" />
+            <category term="证书" scheme="https://qq2519157.github.io/tags/%E8%AF%81%E4%B9%A6/" />
             <pubDate>Fri, 11 Nov 2022 12:01:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;Android 签名证书一般为 jks 和 keystore 格式， &lt;code&gt;jks&lt;/code&gt;  是在 &lt;code&gt;android studio&lt;/code&gt;  里面生成的签名证书&lt;/p&gt;
@@ -363,11 +363,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/09/10/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/09/10/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</guid>
             <title>正确使用FIleProvider</title>
-            <link>http://example.com/2022/09/10/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="FIleProvider" scheme="http://example.com/tags/FIleProvider/" />
+            <link>https://qq2519157.github.io/2022/09/10/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="FIleProvider" scheme="https://qq2519157.github.io/tags/FIleProvider/" />
             <pubDate>Sat, 10 Sep 2022 19:14:55 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;起因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#起因&#34;&gt;#&lt;/a&gt; 起因&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -441,12 +441,12 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/08/02/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/08/02/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</guid>
             <title>Date清空时分秒</title>
-            <link>http://example.com/2022/08/02/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</link>
-            <category term="Java" scheme="http://example.com/categories/Java/" />
-            <category term="Java" scheme="http://example.com/tags/Java/" />
-            <category term="Date" scheme="http://example.com/tags/Date/" />
+            <link>https://qq2519157.github.io/2022/08/02/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</link>
+            <category term="Java" scheme="https://qq2519157.github.io/categories/Java/" />
+            <category term="Java" scheme="https://qq2519157.github.io/tags/Java/" />
+            <category term="Date" scheme="https://qq2519157.github.io/tags/Date/" />
             <pubDate>Tue, 02 Aug 2022 16:06:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;开发过程中我们一般会在数据库存储详细的时间数据，但是在获取数据的时候又需要精确到天来对数据进行分组。&lt;/p&gt;
@@ -458,11 +458,11 @@
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; operationTime &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; task&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getOperationTime&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;LocalDate&lt;/span&gt; localDate &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; operationTime&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toInstant&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;atZone&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ZoneId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;systemDefault&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toLocalDate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt; formatDate &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Date&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;localDate&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;atStartOfDay&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ZoneId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;systemDefault&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toInstant&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/04/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/04/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</guid>
             <title>数据库大批量操作数据耗时分析</title>
-            <link>http://example.com/2022/04/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="数据库" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
+            <link>https://qq2519157.github.io/2022/04/28/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="数据库" scheme="https://qq2519157.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
             <pubDate>Thu, 28 Apr 2022 16:55:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;数据库操作过程中经常会遇到需要大批量操作数据的情况，使用不同的方式会占用不同的时间，下面是我在 OrmLite 中的一些耗时记录&lt;/p&gt;
@@ -485,11 +485,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/04/13/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/04/13/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</guid>
             <title>当前APP跳转第三方应用</title>
-            <link>http://example.com/2022/04/13/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="APP" scheme="http://example.com/tags/APP/" />
+            <link>https://qq2519157.github.io/2022/04/13/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="APP" scheme="https://qq2519157.github.io/tags/APP/" />
             <pubDate>Wed, 13 Apr 2022 10:14:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;在应用开发的过程中，需要从当前应用跳转到其他 APP 的场景也是存在的。&lt;/p&gt;
@@ -593,11 +593,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/04/01/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/04/01/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
             <title>Harmony问题汇总</title>
-            <link>http://example.com/2022/04/01/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
-            <category term="Harmony" scheme="http://example.com/categories/Harmony/" />
-            <category term="Harmony" scheme="http://example.com/tags/Harmony/" />
+            <link>https://qq2519157.github.io/2022/04/01/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+            <category term="Harmony" scheme="https://qq2519157.github.io/categories/Harmony/" />
+            <category term="Harmony" scheme="https://qq2519157.github.io/tags/Harmony/" />
             <pubDate>Fri, 01 Apr 2022 13:49:55 +0800</pubDate>
             <description><![CDATA[ &lt;ol&gt;
 &lt;li&gt;
@@ -611,11 +611,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/04/01/%E5%88%9D%E5%AD%A6Harmony/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/04/01/%E5%88%9D%E5%AD%A6Harmony/</guid>
             <title>初学Harmony</title>
-            <link>http://example.com/2022/04/01/%E5%88%9D%E5%AD%A6Harmony/</link>
-            <category term="Harmony" scheme="http://example.com/categories/Harmony/" />
-            <category term="Harmony" scheme="http://example.com/tags/Harmony/" />
+            <link>https://qq2519157.github.io/2022/04/01/%E5%88%9D%E5%AD%A6Harmony/</link>
+            <category term="Harmony" scheme="https://qq2519157.github.io/categories/Harmony/" />
+            <category term="Harmony" scheme="https://qq2519157.github.io/tags/Harmony/" />
             <pubDate>Fri, 01 Apr 2022 13:49:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;最近研究鸿蒙开发，记录下自己的一些心得&lt;/p&gt;
@@ -635,11 +635,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/03/24/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/03/24/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/</guid>
             <title>外网IP获取API</title>
-            <link>http://example.com/2022/03/24/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/</link>
-            <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/" />
-            <category term="IP" scheme="http://example.com/tags/IP/" />
+            <link>https://qq2519157.github.io/2022/03/24/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/</link>
+            <category term="开发" scheme="https://qq2519157.github.io/categories/%E5%BC%80%E5%8F%91/" />
+            <category term="IP" scheme="https://qq2519157.github.io/tags/IP/" />
             <pubDate>Thu, 24 Mar 2022 15:49:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;开发过程中可能会用到的 IP 获取&lt;/p&gt;
@@ -668,11 +668,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/03/17/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/03/17/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
             <title>ContextCompat和ResourcesCompat的区别</title>
-            <link>http://example.com/2022/03/17/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="资源获取" scheme="http://example.com/tags/%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96/" />
+            <link>https://qq2519157.github.io/2022/03/17/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="资源获取" scheme="https://qq2519157.github.io/tags/%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96/" />
             <pubDate>Thu, 17 Mar 2022 19:14:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;getResource.getDrawable()&lt;/code&gt;  以及 &lt;code&gt;getResource.getColos()&lt;/code&gt;  这一类方法已然呗 Google 废弃，我们现在需要使用新的方法去实现&lt;/p&gt;
@@ -685,11 +685,11 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/03/17/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/03/17/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</guid>
             <title>SDK升级28的那些事儿</title>
-            <link>http://example.com/2022/03/17/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="SDK" scheme="http://example.com/tags/SDK/" />
+            <link>https://qq2519157.github.io/2022/03/17/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="SDK" scheme="https://qq2519157.github.io/tags/SDK/" />
             <pubDate>Thu, 17 Mar 2022 13:14:55 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;为什么要升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么要升级&#34;&gt;#&lt;/a&gt; 为什么要升级？&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -811,11 +811,11 @@ targetSdkVersion 28
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/03/17/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/03/17/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</guid>
             <title>使用registerForActivityResult替换onActivityResult</title>
-            <link>http://example.com/2022/03/17/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="onActivityResult" scheme="http://example.com/tags/onActivityResult/" />
+            <link>https://qq2519157.github.io/2022/03/17/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="onActivityResult" scheme="https://qq2519157.github.io/tags/onActivityResult/" />
             <pubDate>Thu, 17 Mar 2022 10:34:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;近期在构建新项目的时候，发现&lt;strong&gt; onActivityResult&lt;/strong&gt; 方法已经被废弃了，于是有了尝试&lt;strong&gt; registerForActivityResult&lt;/strong&gt; 的想法。&lt;/p&gt;
@@ -951,11 +951,11 @@ targetSdkVersion 28
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/03/17/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/03/17/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</guid>
             <title>莫名其妙的TransactionTooLargeException</title>
-            <link>http://example.com/2022/03/17/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</link>
-            <category term="Android" scheme="http://example.com/categories/Android/" />
-            <category term="Android studio" scheme="http://example.com/tags/Android-studio/" />
+            <link>https://qq2519157.github.io/2022/03/17/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</link>
+            <category term="Android" scheme="https://qq2519157.github.io/categories/Android/" />
+            <category term="Android studio" scheme="https://qq2519157.github.io/tags/Android-studio/" />
             <pubDate>Thu, 17 Mar 2022 10:34:55 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#错误&#34;&gt;#&lt;/a&gt; 错误&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/blog/typecho/20220121104348.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -1084,12 +1084,12 @@ targetSdkVersion 28
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/03/17/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/03/17/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/</guid>
             <title>APP弱网测试之Charles</title>
-            <link>http://example.com/2022/03/17/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/</link>
-            <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/" />
-            <category term="Charles" scheme="http://example.com/tags/Charles/" />
-            <category term="弱网" scheme="http://example.com/tags/%E5%BC%B1%E7%BD%91/" />
+            <link>https://qq2519157.github.io/2022/03/17/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/</link>
+            <category term="开发" scheme="https://qq2519157.github.io/categories/%E5%BC%80%E5%8F%91/" />
+            <category term="Charles" scheme="https://qq2519157.github.io/tags/Charles/" />
+            <category term="弱网" scheme="https://qq2519157.github.io/tags/%E5%BC%B1%E7%BD%91/" />
             <pubDate>Thu, 17 Mar 2022 10:26:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;在 APP 开发过程中，很多问题是在网络问题出现的时候暴露出来的，所以在上线前，很有必要进行弱网测试。&lt;/p&gt;
@@ -1125,11 +1125,11 @@ targetSdkVersion 28
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://example.com/2022/03/17/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/</guid>
+            <guid isPermalink="true">https://qq2519157.github.io/2022/03/17/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/</guid>
             <title>Json数据过大,手机无法正常解析?</title>
-            <link>http://example.com/2022/03/17/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/</link>
-            <category term="开发" scheme="http://example.com/categories/%E5%BC%80%E5%8F%91/" />
-            <category term="Json" scheme="http://example.com/tags/Json/" />
+            <link>https://qq2519157.github.io/2022/03/17/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/</link>
+            <category term="开发" scheme="https://qq2519157.github.io/categories/%E5%BC%80%E5%8F%91/" />
+            <category term="Json" scheme="https://qq2519157.github.io/tags/Json/" />
             <pubDate>Thu, 17 Mar 2022 10:21:55 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;为何会碰到这种问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为何会碰到这种问题&#34;&gt;#&lt;/a&gt; 为何会碰到这种问题&lt;/h4&gt;
 &lt;blockquote&gt;
