@@ -17,8 +17,8 @@
             <title>Hexo问题归总</title>
             <link>https://log992.cn/play/Hexo%E9%97%AE%E9%A2%98%E5%BD%92%E6%80%BB/</link>
             <category term="折腾" scheme="https://log992.cn/categories/play/" />
-            <category term="博客" scheme="https://log992.cn/tags/%E5%8D%9A%E5%AE%A2/" />
             <category term="Hexo" scheme="https://log992.cn/tags/Hexo/" />
+            <category term="博客" scheme="https://log992.cn/tags/%E5%8D%9A%E5%AE%A2/" />
             <pubDate>Thu, 18 May 2023 15:51:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;使用 GitHub 的 Pages 搭建了自己的博客并使用了 &lt;code&gt;Shoka&lt;/code&gt;  主题&lt;/p&gt;
@@ -46,6 +46,12 @@
 &lt;p&gt;直接在 &lt;code&gt;应用管理&lt;/code&gt;  -  &lt;code&gt;域名绑定&lt;/code&gt; 中添加域名&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518171418319.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;在域名解析管理后台添加 CNAME 验证通过后，在 &lt;code&gt;Shoka&lt;/code&gt;  的 &lt;code&gt;_config.yml&lt;/code&gt;  中找到 &lt;code&gt;valine&lt;/code&gt;  配置组，修改 &lt;code&gt;serverURLs&lt;/code&gt;  为我们的域名即可。&lt;/p&gt;
+&lt;h4 id=&#34;部署到github自定义域名绑定&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署到github自定义域名绑定&#34;&gt;#&lt;/a&gt; 部署到 GitHub 自定义域名绑定&lt;/h4&gt;
+&lt;p&gt;在 GitHub 仓库的 &lt;code&gt;Settings&lt;/code&gt; -  &lt;code&gt;Pages&lt;/code&gt;  界面的 &lt;code&gt;Custom domain&lt;/code&gt;  填入自己的域名后 &lt;code&gt;save&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518215309525.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;去域名解析管理后台添加 CNAME 验证通过后就可以通过域名访问我们的博客了，但是每次更新博客，使用 &lt;code&gt;hexo d&lt;/code&gt;  部署到 GitHub，发现域名有失去绑定了，需要重新绑定，很麻烦。在 &lt;code&gt;Code&lt;/code&gt;  标签页我们发现有一个 &lt;code&gt;CNAME&lt;/code&gt;  文件，里面就是我们的自定义域名。&lt;/p&gt;
+&lt;p&gt;到 &lt;code&gt;hexo&lt;/code&gt;  -  &lt;code&gt;source&lt;/code&gt;  目录下新建 &lt;code&gt;CNAME&lt;/code&gt;  文件，文件中写入我们的自定义域名，保存，文件如果有后缀名，记得去掉。重新 &lt;code&gt;hexo clean&lt;/code&gt;  -&amp;gt;  &lt;code&gt;hexo g&lt;/code&gt;  -&amp;gt;  &lt;code&gt;hexo d&lt;/code&gt;  后，自定义域名就会自动在部署到时候关联上&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518215916017.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
