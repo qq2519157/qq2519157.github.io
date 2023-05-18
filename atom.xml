@@ -83,14 +83,14 @@
 &lt;blockquote&gt;
 &lt;p&gt;adb devices&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://img.log1992.com/2020/10/1772551834.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/2020/10/1772551834.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 可以看到目前我的电脑连接了两个设备&lt;/p&gt;
 &lt;h4 id=&#34;安装-电脑上的apk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-电脑上的apk&#34;&gt;#&lt;/a&gt; 安装 电脑上的 apk&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;adb intall XXXX&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;XXXX 代表 apk 路径，可以直接拖进来&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/10/183797954.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/10/183797954.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 一般来说 Performing Streamed Install 的时候需要你在设备上手动确认是否安装&lt;/p&gt;
 &lt;h4 id=&#34;多设备安装-apk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#多设备安装-apk&#34;&gt;#&lt;/a&gt; 多设备安装 apk&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -99,16 +99,16 @@
 &lt;p&gt;1.devceId 可以通过 adb devices 获得&lt;br /&gt;
  2.XXXX 代表 apk 路径，可以直接拖进来&lt;br /&gt;
 当你电脑连接 了 多个设备的时候，用 adb install 命令安装会报错&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/10/1643299931.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/10/1643299931.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 此时需要我们手动指定相应的设备来安装&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/10/644570005.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/10/644570005.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;卸载&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#卸载&#34;&gt;#&lt;/a&gt; 卸载&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;adb uninstall applicationId&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;applicationId 为当前 APP 的 applicationId&lt;br /&gt;
  一般情况下我们可以长按桌面的图标或者拖动卸载当前的 APP，但是偶尔会遇到卸载不干净的情况，类似华为手机开了系统分身这种，再次安装的时候会提示 APP 已存在，无法 安装。因此我们需要通过命令来将其卸载干净&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/10/3228692174.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/10/3228692174.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 当然，如果你是多设备的话，别忘了在 adb 后面添加 -s deviceId 来选择卸载特定设备上的该 APP&lt;/p&gt;
 &lt;h4 id=&#34;传输文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#传输文件&#34;&gt;#&lt;/a&gt; 传输文件&lt;/h4&gt;
 &lt;ol&gt;
@@ -590,6 +590,24 @@
         <updated>2022-04-13T02:14:55.000Z</updated>
     </entry>
     <entry>
+        <id>https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</id>
+        <title>Harmony问题汇总</title>
+        <link rel="alternate" href="https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+        <content type="html">&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;xml 中部分控件需要使用全包名，否则 &lt;code&gt;findComponentById&lt;/code&gt;  会查不到&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;ohos.agp.components.webengine.WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果直接使用&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;会查询不到改控件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;未完待续...&lt;/p&gt;
+</content>
+        <category term="Harmony" scheme="https://log992.cn/categories/Harmony/" />
+        <category term="Harmony" scheme="https://log992.cn/tags/Harmony/" />
+        <updated>2022-04-01T05:49:55.000Z</updated>
+    </entry>
+    <entry>
         <id>https://log992.cn/harmony/%E5%88%9D%E5%AD%A6Harmony/</id>
         <title>初学Harmony</title>
         <link rel="alternate" href="https://log992.cn/harmony/%E5%88%9D%E5%AD%A6Harmony/"/>
@@ -607,24 +625,6 @@
 &lt;p&gt;2.2  &lt;code&gt;deviceConfig&lt;/code&gt;  可以为空，目前我添加了可以使用 HTTP 协议请求网络。&lt;/p&gt;
 &lt;p&gt;2.3  &lt;code&gt;module&lt;/code&gt;  存储项目模块信息， &lt;code&gt;name&lt;/code&gt;  对应 &lt;code&gt;application&lt;/code&gt;  的 &lt;code&gt;name&lt;/code&gt; , 请求权限可以放在 &lt;code&gt;reqPermissions&lt;/code&gt;  节点中，普通权限直接使用 &lt;code&gt;name&lt;/code&gt;  获取即可，敏感权限需要配置请求的原因和使用场景。&lt;/p&gt;
 &lt;p&gt;2.4  &lt;code&gt;abilities&lt;/code&gt;  类似于 &lt;code&gt;activity&lt;/code&gt;  节点，所有的页面，服务，都可以放到这里，根据不同的 &lt;code&gt;type&lt;/code&gt;  确定当前的 &lt;code&gt;Ability&lt;/code&gt;  是什么类型， &lt;code&gt;page&lt;/code&gt; ， &lt;code&gt;service&lt;/code&gt; , &lt;code&gt;data&lt;/code&gt;  分别代表了不同作用的 &lt;code&gt;Ability&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;未完待续...&lt;/p&gt;
-</content>
-        <category term="Harmony" scheme="https://log992.cn/categories/Harmony/" />
-        <category term="Harmony" scheme="https://log992.cn/tags/Harmony/" />
-        <updated>2022-04-01T05:49:55.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</id>
-        <title>Harmony问题汇总</title>
-        <link rel="alternate" href="https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
-        <content type="html">&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;xml 中部分控件需要使用全包名，否则 &lt;code&gt;findComponentById&lt;/code&gt;  会查不到&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;ohos.agp.components.webengine.WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果直接使用&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;会查询不到改控件。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;p&gt;未完待续...&lt;/p&gt;
 </content>
         <category term="Harmony" scheme="https://log992.cn/categories/Harmony/" />
@@ -689,7 +689,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Android 手机系统近两年更新很快，特别是现在大多数的设备已经升级到了 9.0 甚至是 10.0&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://img.log1992.com/2020/05/3381091807.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/2020/05/3381091807.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#升级&#34;&gt;#&lt;/a&gt; 升级&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;project 的 build 文件修改&lt;/li&gt;
@@ -806,17 +806,6 @@ targetSdkVersion 28
         <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="SDK" scheme="https://log992.cn/tags/SDK/" />
         <updated>2022-03-17T05:14:55.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://log992.cn/phone/%E8%B6%8A%E7%8B%B1%E5%90%8E%E7%99%BE%E5%BA%A6%E8%BE%93%E5%85%A5%E6%B3%95%E8%A2%AB%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%8E%9F%E7%94%9F%E8%BE%93%E5%85%A5%E6%B3%95%E5%A4%84%E7%90%86/</id>
-        <title></title>
-        <link rel="alternate" href="https://log992.cn/phone/%E8%B6%8A%E7%8B%B1%E5%90%8E%E7%99%BE%E5%BA%A6%E8%BE%93%E5%85%A5%E6%B3%95%E8%A2%AB%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%8E%9F%E7%94%9F%E8%BE%93%E5%85%A5%E6%B3%95%E5%A4%84%E7%90%86/"/>
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;百度输入法经常会自动切换为原生输入法，而且输入法偶尔会弹不出来，但是使用原生的输入法键盘布局不太好用，无法调整高度&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#&#34;&gt;#&lt;/a&gt; &lt;/h4&gt;
-</content>
-        <updated>2022-03-17T03:36:47.000Z</updated>
     </entry>
     <entry>
         <id>https://log992.cn/android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</id>
@@ -1102,17 +1091,17 @@ targetSdkVersion 28
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;手机或模拟器设置代理&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/07/964315253.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/07/964315253.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Charles 开启代理功能&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/07/657379769.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/07/657379769.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 勾选上 macOS 代理&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;进入【代理】- 【节流阀设置】 也叫 Throttle Setting&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/07/2662076335.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://img.log1992.com/2020/07/1005585404.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/07/2662076335.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/2020/07/1005585404.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 ①勾选启用节流&lt;br /&gt;
 ②可以选择针对特定的 host 进行节流&lt;br /&gt;
 ③增加预设，这里我增加了一个弱网预设项，上传 30，下		行 15（这里我写反了）&lt;br /&gt;
@@ -1123,7 +1112,7 @@ targetSdkVersion 28
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;后面我们可以直接通过开关启用关闭节流功能&lt;br /&gt;
-&lt;img data-src=&#34;https://img.log1992.com/2020/07/4137416846.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://image.log1992.com/2020/07/4137416846.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
@@ -1131,5 +1120,55 @@ targetSdkVersion 28
         <category term="Charles" scheme="https://log992.cn/tags/Charles/" />
         <category term="弱网" scheme="https://log992.cn/tags/%E5%BC%B1%E7%BD%91/" />
         <updated>2022-03-17T02:26:55.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://log992.cn/develop/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/</id>
+        <title>Json数据过大,手机无法正常解析?</title>
+        <link rel="alternate" href="https://log992.cn/develop/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/"/>
+        <content type="html">&lt;h4 id=&#34;为何会碰到这种问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为何会碰到这种问题&#34;&gt;#&lt;/a&gt; 为何会碰到这种问题&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般 APP 在初始化的时候会从服务器获取一些基础数据，但是这些数据一般都不会很大，最多几百 KB 的数据而已，但是我最近碰到初始化数据有 35M 之多，直接导致 APP 解析超大 json 的时候崩溃掉.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;解决办法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决办法&#34;&gt;#&lt;/a&gt; 解决办法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;一般来说这种大量的基础数据是会直接存在本地的，但是此次处理的 APP 中确实需要从服务器拉取相应的初始化数据，为了解决这个问题，我尝试过使用 fastJson 来序列化 json (项目中使用的时 Gson 序列化), 但是毫无疑问不行&lt;/li&gt;
+&lt;li&gt;我们只能通过精简 json 的体量和分页处理数据来处理.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;具体实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#具体实现&#34;&gt;#&lt;/a&gt; 具体实现&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在第一次获取增量更新数据的时候将分页 0 传递&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;ArrayList&amp;lt;JPromiser&amp;gt; adjustQs = JPromiserWhereStack.newInstance().add(QbsSyncDomainService.syncAdjustmentDataN(context, adjustmentDataDate, 0))
+                .addWhere(&amp;quot;success&amp;quot;, getSyncAdjustQ(context, adjustmentDataDate)).getTask();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;拿到分页总数目&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;int pageCount = t.getContent().getPageCount();
+                        getWallet().putExtra(&amp;quot;pageCount&amp;quot;,pageCount);
+                        getPromiser().putWhere(&amp;quot;success&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;在第一次调用成功后根据得到的分页信息进行下一步处理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;private Promiser getSyncAdjustQ(final Context context, final Date[] adjustmentDataDate)&amp;#123;
+        return new Promiser() &amp;#123;
+            @Override
+            protected void aync(Deffered&amp;lt;String, String&amp;gt; d) &amp;#123;
+                Integer pageCount =d.getWallet().getSafeInt(&amp;quot;pageCount&amp;quot;);
+                if (pageCount&amp;gt;1) &amp;#123;
+                    for (Integer i = 1; i &amp;lt; pageCount; i++) &amp;#123;
+                        Promiser promiser = QbsSyncDomainService.syncAdjustmentDataN(context, adjustmentDataDate, i);
+                        tasks.add(promiser);
+                    &amp;#125;
+                &amp;#125;
+                d.resolve();
+            &amp;#125;
+        &amp;#125;;
+    &amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;分页数量大于 1 时继续添加分页请求，剩余几页就添加几次请求进去，保证所有的数据都能完整获取下来.&lt;/p&gt;
+</content>
+        <category term="开发" scheme="https://log992.cn/categories/develop/" />
+        <category term="Json" scheme="https://log992.cn/tags/Json/" />
+        <updated>2022-03-17T02:21:55.000Z</updated>
     </entry>
 </feed>
