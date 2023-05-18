@@ -10,9 +10,9 @@
     </author>
     <updated>2023-04-14T10:02:55.000Z</updated>
     <entry>
-        <id>https://log992.cn/android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</id>
+        <id>https://log992.cn/Android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</id>
         <title>无感重载Activity</title>
-        <link rel="alternate" href="https://log992.cn/android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/"/>
+        <link rel="alternate" href="https://log992.cn/Android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;开发时偶尔会遇到需要重载界面的情况，但是单纯的 &lt;code&gt;finish&lt;/code&gt;  会有动画，导致 APP 展现很突兀。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -25,9 +25,9 @@
         <updated>2023-04-14T10:02:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</id>
+        <id>https://log992.cn/Android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</id>
         <title>悬浮窗权限获取</title>
-        <link rel="alternate" href="https://log992.cn/android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/"/>
+        <link rel="alternate" href="https://log992.cn/Android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;做一个应用 Log 的实时显示，发现需要用到 &lt;code&gt;SYSTEM_ALERT_WINDOW&lt;/code&gt;  权限，视同通用方式获取后发现并不行。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -53,9 +53,9 @@
         <updated>2023-04-04T09:54:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</id>
+        <id>https://log992.cn/Android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</id>
         <title>Bitmap操作像素</title>
-        <link rel="alternate" href="https://log992.cn/android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/"/>
+        <link rel="alternate" href="https://log992.cn/Android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;最近在做公司项目时，需要对 bitmap 重新计算像素点颜色，在 &lt;code&gt;onDraw()&lt;/code&gt;  中处理时，记录了以下方法。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -76,9 +76,9 @@
         <updated>2023-03-23T05:45:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</id>
+        <id>https://log992.cn/Android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</id>
         <title>ADB命令简单使用</title>
-        <link rel="alternate" href="https://log992.cn/android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+        <link rel="alternate" href="https://log992.cn/Android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
         <content type="html">&lt;h4 id=&#34;查看当前连接的设备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看当前连接的设备&#34;&gt;#&lt;/a&gt; 查看当前连接的设备&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;adb devices&lt;/p&gt;
@@ -270,9 +270,9 @@
         <updated>2023-01-08T05:11:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</id>
+        <id>https://log992.cn/Android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</id>
         <title>APK手动签名</title>
-        <link rel="alternate" href="https://log992.cn/android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/"/>
+        <link rel="alternate" href="https://log992.cn/Android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;最近发现新版本的 Android studio 打包 apk 时没有 V1 证书和 V2 证书选项了&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -310,9 +310,9 @@
         <updated>2022-11-21T05:14:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</id>
+        <id>https://log992.cn/Android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</id>
         <title>Android签名证书转换</title>
-        <link rel="alternate" href="https://log992.cn/android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/"/>
+        <link rel="alternate" href="https://log992.cn/Android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Android 签名证书一般为 jks 和 keystore 格式， &lt;code&gt;jks&lt;/code&gt;  是在 &lt;code&gt;android studio&lt;/code&gt;  里面生成的签名证书&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;keystore&lt;/code&gt;  是 &lt;code&gt;eclipse,Creator&lt;/code&gt;  里面生成的。 两者在使用方式上没有什么区别，但是在算法上有一点点区别。&lt;/p&gt;
@@ -360,9 +360,9 @@
         <updated>2022-11-11T04:01:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</id>
+        <id>https://log992.cn/Android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</id>
         <title>正确使用FIleProvider</title>
-        <link rel="alternate" href="https://log992.cn/android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/"/>
+        <link rel="alternate" href="https://log992.cn/Android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/"/>
         <content type="html">&lt;h2 id=&#34;起因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#起因&#34;&gt;#&lt;/a&gt; 起因&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;自动更新时，APP 覆盖安装失效了，由于先前测试调试都是手动覆盖安装，因此未发现问题&lt;/p&gt;
@@ -455,9 +455,9 @@
         <updated>2022-08-02T08:06:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</id>
+        <id>https://log992.cn/Android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</id>
         <title>数据库大批量操作数据耗时分析</title>
-        <link rel="alternate" href="https://log992.cn/android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/"/>
+        <link rel="alternate" href="https://log992.cn/Android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;数据库操作过程中经常会遇到需要大批量操作数据的情况，使用不同的方式会占用不同的时间，下面是我在 OrmLite 中的一些耗时记录&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -482,9 +482,9 @@
         <updated>2022-04-28T08:55:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</id>
+        <id>https://log992.cn/Android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</id>
         <title>当前APP跳转第三方应用</title>
-        <link rel="alternate" href="https://log992.cn/android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/"/>
+        <link rel="alternate" href="https://log992.cn/Android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;在应用开发的过程中，需要从当前应用跳转到其他 APP 的场景也是存在的。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -665,9 +665,9 @@
         <updated>2022-03-24T07:49:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+        <id>https://log992.cn/Android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
         <title>ContextCompat和ResourcesCompat的区别</title>
-        <link rel="alternate" href="https://log992.cn/android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+        <link rel="alternate" href="https://log992.cn/Android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;getResource.getDrawable()&lt;/code&gt;  以及 &lt;code&gt;getResource.getColos()&lt;/code&gt;  这一类方法已然呗 Google 废弃，我们现在需要使用新的方法去实现&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -682,9 +682,9 @@
         <updated>2022-03-17T11:14:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</id>
+        <id>https://log992.cn/Android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</id>
         <title>SDK升级28的那些事儿</title>
-        <link rel="alternate" href="https://log992.cn/android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
+        <link rel="alternate" href="https://log992.cn/Android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
         <content type="html">&lt;h3 id=&#34;为什么要升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么要升级&#34;&gt;#&lt;/a&gt; 为什么要升级？&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Android 手机系统近两年更新很快，特别是现在大多数的设备已经升级到了 9.0 甚至是 10.0&lt;/p&gt;
@@ -819,9 +819,9 @@ targetSdkVersion 28
         <updated>2022-03-17T03:36:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</id>
+        <id>https://log992.cn/Android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</id>
         <title>使用registerForActivityResult替换onActivityResult</title>
-        <link rel="alternate" href="https://log992.cn/android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/"/>
+        <link rel="alternate" href="https://log992.cn/Android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;近期在构建新项目的时候，发现&lt;strong&gt; onActivityResult&lt;/strong&gt; 方法已经被废弃了，于是有了尝试&lt;strong&gt; registerForActivityResult&lt;/strong&gt; 的想法。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -959,9 +959,9 @@ targetSdkVersion 28
         <updated>2022-03-17T02:34:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</id>
+        <id>https://log992.cn/Android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</id>
         <title>莫名其妙的TransactionTooLargeException</title>
-        <link rel="alternate" href="https://log992.cn/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/"/>
+        <link rel="alternate" href="https://log992.cn/Android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/"/>
         <content type="html">&lt;h3 id=&#34;错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#错误&#34;&gt;#&lt;/a&gt; 错误&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/blog/typecho/20220121104348.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
