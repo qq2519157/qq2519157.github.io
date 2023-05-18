@@ -10,24 +10,24 @@
     </author>
     <updated>2023-04-14T10:02:55.000Z</updated>
     <entry>
-        <id>https://log992.cn/2023/04/14/android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</id>
+        <id>https://log992.cn/android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</id>
         <title>无感重载Activity</title>
-        <link rel="alternate" href="https://log992.cn/2023/04/14/android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/"/>
+        <link rel="alternate" href="https://log992.cn/android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;开发时偶尔会遇到需要重载界面的情况，但是单纯的 &lt;code&gt;finish&lt;/code&gt;  会有动画，导致 APP 展现很突兀。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;去掉动画效果&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#去掉动画效果&#34;&gt;#&lt;/a&gt; 去掉动画效果&lt;/h3&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;finish&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;overridePendingTransition&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Intent&lt;/span&gt; intent &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getIntent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;intent&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;putExtra&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;INTENT_KEY_START_FLAG&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;FLAG_RESTART_ACTIVITY&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;intent&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;putExtra&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;INTENT_KEY_TABLE_ID&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;mTableId&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;intent&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;putExtra&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;INTENT_KEY_RESTART_BY&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;onlySave&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;startActivity&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;intent&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;overridePendingTransition&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;可以在添加参数在重新启动后做一些初始化操作。&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="Activity" scheme="https://log992.cn/tags/Activity/" />
         <category term="重载" scheme="https://log992.cn/tags/%E9%87%8D%E8%BD%BD/" />
         <updated>2023-04-14T10:02:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2023/04/04/android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</id>
+        <id>https://log992.cn/android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/</id>
         <title>悬浮窗权限获取</title>
-        <link rel="alternate" href="https://log992.cn/2023/04/04/android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/"/>
+        <link rel="alternate" href="https://log992.cn/android/%E6%82%AC%E6%B5%AE%E7%AA%97%E6%9D%83%E9%99%90%E8%8E%B7%E5%8F%96/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;做一个应用 Log 的实时显示，发现需要用到 &lt;code&gt;SYSTEM_ALERT_WINDOW&lt;/code&gt;  权限，视同通用方式获取后发现并不行。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -48,14 +48,14 @@
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230404175013624.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;至此，我们就能正常获取 &lt;code&gt;SYSTEM_ALERT_WINDOW&lt;/code&gt;  权限了&lt;/p&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Settings&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;canDrawOverlays&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;AlertDialog&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Builder&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setTitle&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;提示&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setMessage&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;显示Log需要在设置中打开系统悬浮窗权限，是否打开？&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setPositiveButton&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;确定&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dialog&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; which&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                        &lt;span class=&#34;token class-name&#34;&gt;LoginActivityPermissionsDispatcher&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;checkSystemAlertPermissionWithPermissionCheck&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                        dialog&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;dismiss&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setNegativeButton&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;取消&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;dialog&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; which&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                        dialog&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;dismiss&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="权限" scheme="https://log992.cn/tags/%E6%9D%83%E9%99%90/" />
         <updated>2023-04-04T09:54:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2023/03/23/android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</id>
+        <id>https://log992.cn/android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/</id>
         <title>Bitmap操作像素</title>
-        <link rel="alternate" href="https://log992.cn/2023/03/23/android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/"/>
+        <link rel="alternate" href="https://log992.cn/android/Bitmap%E6%93%8D%E4%BD%9C%E5%83%8F%E7%B4%A0/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;最近在做公司项目时，需要对 bitmap 重新计算像素点颜色，在 &lt;code&gt;onDraw()&lt;/code&gt;  中处理时，记录了以下方法。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -70,15 +70,15 @@
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Bitmap&lt;/span&gt; compositeBitmap &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Bitmap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;createBitmap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getWidth&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getHeight&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Bitmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Config&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;ARGB_8888&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;我们使用了 ARGB_8888，每个像素占了 4 位，可以通过下面方法获取数组大小：&lt;/p&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;bitmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getWidth&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; bitmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getHeight&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;循环遍历后取到 RGB 和相应的透明度，然后就可以针对当前的颜色做统计或者是批量转换操作了。&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="bitmap" scheme="https://log992.cn/tags/bitmap/" />
         <category term="像素" scheme="https://log992.cn/tags/%E5%83%8F%E7%B4%A0/" />
         <updated>2023-03-23T05:45:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2023/02/09/android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</id>
+        <id>https://log992.cn/android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</id>
         <title>ADB命令简单使用</title>
-        <link rel="alternate" href="https://log992.cn/2023/02/09/android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
+        <link rel="alternate" href="https://log992.cn/android/ADB%E5%91%BD%E4%BB%A4%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/"/>
         <content type="html">&lt;h4 id=&#34;查看当前连接的设备&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#查看当前连接的设备&#34;&gt;#&lt;/a&gt; 查看当前连接的设备&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;adb devices&lt;/p&gt;
@@ -166,14 +166,14 @@
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230209110858336.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="adb" scheme="https://log992.cn/tags/adb/" />
         <updated>2023-02-09T03:18:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2023/01/08/play/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/</id>
+        <id>https://log992.cn/play/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/</id>
         <title>Monterey屏蔽更新</title>
-        <link rel="alternate" href="https://log992.cn/2023/01/08/play/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/"/>
+        <link rel="alternate" href="https://log992.cn/play/Monterey%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;最近系统更新到 Ventura，各种用着用着转圈圈，必须重启才能恢复正常，于是一怒之下重新安装了 Monterey，没有 Time Machine 备份，过程很难受。安装好后我们将系统升级屏蔽掉。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -270,9 +270,9 @@
         <updated>2023-01-08T05:11:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/11/21/android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</id>
+        <id>https://log992.cn/android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/</id>
         <title>APK手动签名</title>
-        <link rel="alternate" href="https://log992.cn/2022/11/21/android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/"/>
+        <link rel="alternate" href="https://log992.cn/android/APK%E6%89%8B%E5%8A%A8%E7%AD%BE%E5%90%8D/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;最近发现新版本的 Android studio 打包 apk 时没有 V1 证书和 V2 证书选项了&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -305,14 +305,14 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="签名" scheme="https://log992.cn/tags/%E7%AD%BE%E5%90%8D/" />
         <updated>2022-11-21T05:14:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/11/11/android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</id>
+        <id>https://log992.cn/android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/</id>
         <title>Android签名证书转换</title>
-        <link rel="alternate" href="https://log992.cn/2022/11/11/android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/"/>
+        <link rel="alternate" href="https://log992.cn/android/Android%E7%AD%BE%E5%90%8D%E8%AF%81%E4%B9%A6%E8%BD%AC%E6%8D%A2/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;Android 签名证书一般为 jks 和 keystore 格式， &lt;code&gt;jks&lt;/code&gt;  是在 &lt;code&gt;android studio&lt;/code&gt;  里面生成的签名证书&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;keystore&lt;/code&gt;  是 &lt;code&gt;eclipse,Creator&lt;/code&gt;  里面生成的。 两者在使用方式上没有什么区别，但是在算法上有一点点区别。&lt;/p&gt;
@@ -354,15 +354,15 @@
 &lt;p&gt;至此，keystore 证书转换完毕&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20221111%E4%B8%8A%E5%8D%88115957594.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="Android studio" scheme="https://log992.cn/tags/Android-studio/" />
         <category term="证书" scheme="https://log992.cn/tags/%E8%AF%81%E4%B9%A6/" />
         <updated>2022-11-11T04:01:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/09/10/android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</id>
+        <id>https://log992.cn/android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/</id>
         <title>正确使用FIleProvider</title>
-        <link rel="alternate" href="https://log992.cn/2022/09/10/android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/"/>
+        <link rel="alternate" href="https://log992.cn/android/%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8FIleProvider/"/>
         <content type="html">&lt;h2 id=&#34;起因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#起因&#34;&gt;#&lt;/a&gt; 起因&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;自动更新时，APP 覆盖安装失效了，由于先前测试调试都是手动覆盖安装，因此未发现问题&lt;/p&gt;
@@ -433,14 +433,14 @@
 &lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 &lt;/code&gt;&lt;/pre&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="FIleProvider" scheme="https://log992.cn/tags/FIleProvider/" />
         <updated>2022-09-10T11:14:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/08/02/Java/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</id>
+        <id>https://log992.cn/Java/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</id>
         <title>Date清空时分秒</title>
-        <link rel="alternate" href="https://log992.cn/2022/08/02/Java/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/"/>
+        <link rel="alternate" href="https://log992.cn/Java/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;开发过程中我们一般会在数据库存储详细的时间数据，但是在获取数据的时候又需要精确到天来对数据进行分组。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -455,9 +455,9 @@
         <updated>2022-08-02T08:06:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/04/28/android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</id>
+        <id>https://log992.cn/android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/</id>
         <title>数据库大批量操作数据耗时分析</title>
-        <link rel="alternate" href="https://log992.cn/2022/04/28/android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/"/>
+        <link rel="alternate" href="https://log992.cn/android/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%A4%A7%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E8%80%97%E6%97%B6%E5%88%86%E6%9E%90/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;数据库操作过程中经常会遇到需要大批量操作数据的情况，使用不同的方式会占用不同的时间，下面是我在 OrmLite 中的一些耗时记录&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -477,14 +477,14 @@
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// ORMLite 的数据连接封装类&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;AndroidDatabaseConnection&lt;/span&gt; adc &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;AndroidDatabaseConnection&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;baseDBHelper&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getWritableDatabase&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        qfQbsCellDao&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setAutoCommit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;adc&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 存储点名称为 create_claxx&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;Savepoint&lt;/span&gt; sp &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; adc&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setSavePoint&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Create_Update_Cell&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;DataAdjustmentSyncCellQBSInfos&lt;/span&gt; cellItem &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; cellQBSInfos&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token class-name&#34;&gt;TblQFQbsCell&lt;/span&gt; cellData &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;TblQFQbsCell&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setCellId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setCellCode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getCode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setCellName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setCellTypeId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getCellTypeId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setPartId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getPartQBSId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setContractId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getContractId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setModifyTime&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getLastModTime&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setState&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getState&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cellData&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setJsonData&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;gson&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toJson&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellItem&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            qfQbsCellDao&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;createOrUpdate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;cellData&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        adc&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;commit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;sp&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20220428163708217.png&#34; alt=&#34;image-20220428163708217&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;共 7574ms&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="数据库" scheme="https://log992.cn/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" />
         <updated>2022-04-28T08:55:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/04/13/android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</id>
+        <id>https://log992.cn/android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/</id>
         <title>当前APP跳转第三方应用</title>
-        <link rel="alternate" href="https://log992.cn/2022/04/13/android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/"/>
+        <link rel="alternate" href="https://log992.cn/android/%E5%BD%93%E5%89%8DAPP%E8%B7%B3%E8%BD%AC%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%94%E7%94%A8/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;在应用开发的过程中，需要从当前应用跳转到其他 APP 的场景也是存在的。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -585,14 +585,14 @@
 &lt;/ol&gt;
 &lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;activity&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;android:&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;.app.launcher.LauncherActivity&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;intent-filter&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;action&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;android:&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;android.intent.action.MAIN&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;category&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;android:&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;android.intent.category.LAUNCHER&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;intent-filter&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;activity&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;去除 &lt;code&gt; &amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;&lt;/code&gt;  这一行的显示就能使桌面图标不显示了，注意：Android Studio 直接 Run 的话会报错，因为找不到启动的 category，但是不影响打包安装。同理，我们在使用默认方法跳转的时候，这种情况下 &lt;code&gt;getLaunchIntentForPackage(packageName)&lt;/code&gt;  方法会返回 null，因此在使用已隐藏图标的 APP 作为目标应用时，不能使用这种方法获取跳转的 intent。&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="APP" scheme="https://log992.cn/tags/APP/" />
         <updated>2022-04-13T02:14:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/04/01/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</id>
+        <id>https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</id>
         <title>Harmony问题汇总</title>
-        <link rel="alternate" href="https://log992.cn/2022/04/01/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+        <link rel="alternate" href="https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
         <content type="html">&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;xml 中部分控件需要使用全包名，否则 &lt;code&gt;findComponentById&lt;/code&gt;  会查不到&lt;/p&gt;
@@ -608,9 +608,9 @@
         <updated>2022-04-01T05:49:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/04/01/harmony/%E5%88%9D%E5%AD%A6Harmony/</id>
+        <id>https://log992.cn/harmony/%E5%88%9D%E5%AD%A6Harmony/</id>
         <title>初学Harmony</title>
-        <link rel="alternate" href="https://log992.cn/2022/04/01/harmony/%E5%88%9D%E5%AD%A6Harmony/"/>
+        <link rel="alternate" href="https://log992.cn/harmony/%E5%88%9D%E5%AD%A6Harmony/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;最近研究鸿蒙开发，记录下自己的一些心得&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -632,9 +632,9 @@
         <updated>2022-04-01T05:49:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/03/24/develop/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/</id>
+        <id>https://log992.cn/develop/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/</id>
         <title>外网IP获取API</title>
-        <link rel="alternate" href="https://log992.cn/2022/03/24/develop/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/"/>
+        <link rel="alternate" href="https://log992.cn/develop/%E5%A4%96%E7%BD%91IP%E8%8E%B7%E5%8F%96API/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;开发过程中可能会用到的 IP 获取&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -660,14 +660,14 @@
 &lt;figure class=&#34;highlight json&#34;&gt;&lt;figcaption data-lang=&#34;JSON&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;status&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;success&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;country&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;荷兰&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;countryCode&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;NL&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;region&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;NH&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;regionName&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;North Holland&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;city&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;Amsterdam&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;zip&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;1015&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;lat&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;52.3798&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;lon&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;4.88814&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;timezone&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;Europe/Amsterdam&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;isp&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;EuroNet Internet&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;org&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;Wanadoo Nederland BV&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;as&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;AS45090 Shenzhen Tencent Computer Systems Company Limited&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;query&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;81.69.6.231&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="开发" scheme="https://log992.cn/categories/%E5%BC%80%E5%8F%91/" />
+        <category term="开发" scheme="https://log992.cn/categories/develop/" />
         <category term="IP" scheme="https://log992.cn/tags/IP/" />
         <updated>2022-03-24T07:49:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/03/17/android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+        <id>https://log992.cn/android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
         <title>ContextCompat和ResourcesCompat的区别</title>
-        <link rel="alternate" href="https://log992.cn/2022/03/17/android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+        <link rel="alternate" href="https://log992.cn/android/ContextCompat%E5%92%8CResourcesCompat%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;getResource.getDrawable()&lt;/code&gt;  以及 &lt;code&gt;getResource.getColos()&lt;/code&gt;  这一类方法已然呗 Google 废弃，我们现在需要使用新的方法去实现&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -677,14 +677,14 @@
 &lt;h4 id=&#34;resourcescompat&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#resourcescompat&#34;&gt;#&lt;/a&gt; ResourcesCompat&lt;/h4&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;ResourcesCompat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getDrawable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getResources&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;drawable&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;ResourcesCompat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getDrawable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getResources&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;R&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;drawable&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; anotherTheme&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;参数的最后一个可以人为控制当前的资源是否拥有主题属性&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="资源获取" scheme="https://log992.cn/tags/%E8%B5%84%E6%BA%90%E8%8E%B7%E5%8F%96/" />
         <updated>2022-03-17T11:14:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/03/17/android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</id>
+        <id>https://log992.cn/android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/</id>
         <title>SDK升级28的那些事儿</title>
-        <link rel="alternate" href="https://log992.cn/2022/03/17/android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
+        <link rel="alternate" href="https://log992.cn/android/SDK%E5%8D%87%E7%BA%A728%E7%9A%84%E9%82%A3%E4%BA%9B%E4%BA%8B%E5%84%BF/"/>
         <content type="html">&lt;h3 id=&#34;为什么要升级&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为什么要升级&#34;&gt;#&lt;/a&gt; 为什么要升级？&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Android 手机系统近两年更新很快，特别是现在大多数的设备已经升级到了 9.0 甚至是 10.0&lt;/p&gt;
@@ -803,14 +803,14 @@ targetSdkVersion 28
 &lt;li&gt;最后记得动态权限控制&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="SDK" scheme="https://log992.cn/tags/SDK/" />
         <updated>2022-03-17T05:14:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/03/17/phone/%E8%B6%8A%E7%8B%B1%E5%90%8E%E7%99%BE%E5%BA%A6%E8%BE%93%E5%85%A5%E6%B3%95%E8%A2%AB%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%8E%9F%E7%94%9F%E8%BE%93%E5%85%A5%E6%B3%95%E5%A4%84%E7%90%86/</id>
+        <id>https://log992.cn/phone/%E8%B6%8A%E7%8B%B1%E5%90%8E%E7%99%BE%E5%BA%A6%E8%BE%93%E5%85%A5%E6%B3%95%E8%A2%AB%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%8E%9F%E7%94%9F%E8%BE%93%E5%85%A5%E6%B3%95%E5%A4%84%E7%90%86/</id>
         <title></title>
-        <link rel="alternate" href="https://log992.cn/2022/03/17/phone/%E8%B6%8A%E7%8B%B1%E5%90%8E%E7%99%BE%E5%BA%A6%E8%BE%93%E5%85%A5%E6%B3%95%E8%A2%AB%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%8E%9F%E7%94%9F%E8%BE%93%E5%85%A5%E6%B3%95%E5%A4%84%E7%90%86/"/>
+        <link rel="alternate" href="https://log992.cn/phone/%E8%B6%8A%E7%8B%B1%E5%90%8E%E7%99%BE%E5%BA%A6%E8%BE%93%E5%85%A5%E6%B3%95%E8%A2%AB%E6%9B%BF%E6%8D%A2%E4%B8%BA%E5%8E%9F%E7%94%9F%E8%BE%93%E5%85%A5%E6%B3%95%E5%A4%84%E7%90%86/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;百度输入法经常会自动切换为原生输入法，而且输入法偶尔会弹不出来，但是使用原生的输入法键盘布局不太好用，无法调整高度&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -819,9 +819,9 @@ targetSdkVersion 28
         <updated>2022-03-17T03:36:47.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/03/17/android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</id>
+        <id>https://log992.cn/android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/</id>
         <title>使用registerForActivityResult替换onActivityResult</title>
-        <link rel="alternate" href="https://log992.cn/2022/03/17/android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/"/>
+        <link rel="alternate" href="https://log992.cn/android/%E4%BD%BF%E7%94%A8registerForActivityResult%E6%9B%BF%E6%8D%A2onActivityResult/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;近期在构建新项目的时候，发现&lt;strong&gt; onActivityResult&lt;/strong&gt; 方法已经被废弃了，于是有了尝试&lt;strong&gt; registerForActivityResult&lt;/strong&gt; 的想法。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -954,14 +954,14 @@ targetSdkVersion 28
 &lt;p&gt;在 &lt;code&gt;Fragment&lt;/code&gt;  中&lt;br /&gt;
 &lt;img data-src=&#34;https://image.log1992.com/blog/typecho/20211201041029.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="onActivityResult" scheme="https://log992.cn/tags/onActivityResult/" />
         <updated>2022-03-17T02:34:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/03/17/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</id>
+        <id>https://log992.cn/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</id>
         <title>莫名其妙的TransactionTooLargeException</title>
-        <link rel="alternate" href="https://log992.cn/2022/03/17/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/"/>
+        <link rel="alternate" href="https://log992.cn/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/"/>
         <content type="html">&lt;h3 id=&#34;错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#错误&#34;&gt;#&lt;/a&gt; 错误&lt;/h3&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/blog/typecho/20220121104348.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1087,14 +1087,14 @@ targetSdkVersion 28
 &lt;p&gt;处理 &lt;code&gt;TransactionTooLargeException&lt;/code&gt;  的根本还是要针对数据传输做优化，要么使用类似 &lt;code&gt;EventBus&lt;/code&gt;  的方法，要么使用成员变量直接赋值，避开通过 &lt;code&gt;Bundle&lt;/code&gt;  传值这个坑。&lt;/p&gt;
 &lt;/blockquote&gt;
 </content>
-        <category term="Android" scheme="https://log992.cn/categories/Android/" />
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="Android studio" scheme="https://log992.cn/tags/Android-studio/" />
         <updated>2022-03-17T02:34:55.000Z</updated>
     </entry>
     <entry>
-        <id>https://log992.cn/2022/03/17/develop/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/</id>
+        <id>https://log992.cn/develop/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/</id>
         <title>APP弱网测试之Charles</title>
-        <link rel="alternate" href="https://log992.cn/2022/03/17/develop/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/"/>
+        <link rel="alternate" href="https://log992.cn/develop/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;在 APP 开发过程中，很多问题是在网络问题出现的时候暴露出来的，所以在上线前，很有必要进行弱网测试。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1127,7 +1127,7 @@ targetSdkVersion 28
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="开发" scheme="https://log992.cn/categories/%E5%BC%80%E5%8F%91/" />
+        <category term="开发" scheme="https://log992.cn/categories/develop/" />
         <category term="Charles" scheme="https://log992.cn/tags/Charles/" />
         <category term="弱网" scheme="https://log992.cn/tags/%E5%BC%B1%E7%BD%91/" />
         <updated>2022-03-17T02:26:55.000Z</updated>
