@@ -264,7 +264,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="折腾" scheme="https://log992.cn/categories/%E6%8A%98%E8%85%BE/" />
+        <category term="折腾" scheme="https://log992.cn/categories/play/" />
         <category term="Mac" scheme="https://log992.cn/tags/Mac/" />
         <category term="屏蔽更新" scheme="https://log992.cn/tags/%E5%B1%8F%E8%94%BD%E6%9B%B4%E6%96%B0/" />
         <updated>2023-01-08T05:11:55.000Z</updated>
@@ -603,7 +603,7 @@
 &lt;/ol&gt;
 &lt;p&gt;未完待续...&lt;/p&gt;
 </content>
-        <category term="Harmony" scheme="https://log992.cn/categories/Harmony/" />
+        <category term="鸿蒙" scheme="https://log992.cn/categories/harmony/" />
         <category term="Harmony" scheme="https://log992.cn/tags/Harmony/" />
         <updated>2022-04-01T05:49:55.000Z</updated>
     </entry>
@@ -627,7 +627,7 @@
 &lt;p&gt;2.4  &lt;code&gt;abilities&lt;/code&gt;  类似于 &lt;code&gt;activity&lt;/code&gt;  节点，所有的页面，服务，都可以放到这里，根据不同的 &lt;code&gt;type&lt;/code&gt;  确定当前的 &lt;code&gt;Ability&lt;/code&gt;  是什么类型， &lt;code&gt;page&lt;/code&gt; ， &lt;code&gt;service&lt;/code&gt; , &lt;code&gt;data&lt;/code&gt;  分别代表了不同作用的 &lt;code&gt;Ability&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;未完待续...&lt;/p&gt;
 </content>
-        <category term="Harmony" scheme="https://log992.cn/categories/Harmony/" />
+        <category term="鸿蒙" scheme="https://log992.cn/categories/harmony/" />
         <category term="Harmony" scheme="https://log992.cn/tags/Harmony/" />
         <updated>2022-04-01T05:49:55.000Z</updated>
     </entry>
