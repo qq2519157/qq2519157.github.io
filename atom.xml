@@ -8,7 +8,43 @@
     <author>
       <name>Logan</name>
     </author>
-    <updated>2023-04-14T10:02:55.000Z</updated>
+    <updated>2023-05-18T07:51:55.000Z</updated>
+    <entry>
+        <id>https://log992.cn/play/Hexo%E9%97%AE%E9%A2%98%E5%BD%92%E6%80%BB/</id>
+        <title>Hexo问题归总</title>
+        <link rel="alternate" href="https://log992.cn/play/Hexo%E9%97%AE%E9%A2%98%E5%BD%92%E6%80%BB/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;使用 GitHub 的 Pages 搭建了自己的博客并使用了 &lt;code&gt;Shoka&lt;/code&gt;  主题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;显示视频&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#显示视频&#34;&gt;#&lt;/a&gt; 显示视频&lt;/h4&gt;
+&lt;p&gt;目前在 markdown 中使用的是 &lt;code&gt;video&lt;/code&gt;  标签来显示视频，代码如下&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;video&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token attr-name&#34;&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;video&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token attr-name&#34;&gt;controls&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token attr-name&#34;&gt;src&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;https://image.log1992.com/WeChat_20180919180323.mp4&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token attr-name&#34;&gt;preload&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;https://log1992.com/usr/themes/handsome/usr/img/sj/4.jpg&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;video&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在 Typora 中的预览效果如下&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518162916349.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;但是 &lt;code&gt;Shoka&lt;/code&gt;  主题使用的是 &lt;code&gt;hexo-renderer-multi-markdown-it&lt;/code&gt;  渲染器，导致在最终显示的时候会直接显示成 &lt;code&gt;HTML&lt;/code&gt;  代码，查看主题作者&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy9zcGVjaWFsLw==&#34;&gt;博客&lt;/span&gt;后，发现了使用 &lt;code&gt;Hexo Tag&lt;/code&gt;  的方法，但是作者的代码示例只有 &lt;code&gt;audio&lt;/code&gt;  的，在 F12 后总算是搞清了实际使用方法&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518165257203.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Tips: 由于主题在代码块中写 &lt;code&gt;media video&lt;/code&gt;  会直接加载视频，所以这里是截图展示&lt;/p&gt;
+&lt;p&gt;效果如下&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;media-container&#34;&gt;&lt;div class=&#34;player&#34; data-type=&#34;video&#34; data-src=&#39;[{&#34;name&#34;:&#34;视频效果&#34;,&#34;url&#34;:[&#34;https://image.log1992.com/WeChat_20180919180323.mp4&#34;]}]&#39;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;p&gt;注意：编辑这个最好在其他文本编辑器，否则会显示成这样&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518163509154.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;图床问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图床问题&#34;&gt;#&lt;/a&gt; 图床问题&lt;/h4&gt;
+&lt;p&gt;部署在本地时，所有图片加载正常。推送到 GitHub 后，图片就都挂了。看了下，作者使用的图床为新浪图床，目前新浪图床因为防盗链，已经用不了了。但是个人很喜欢自带的二次元小姐姐图片，所以想继续使用。查遍了各种方法，终于找到一个&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82MDQ0NzM3MzI/dXRtX2lkPTA=&#34;&gt;靠谱点的&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;这里我使用的是百度的图片缓存服务&lt;/p&gt;
+&lt;figure class=&#34;highlight http&#34;&gt;&lt;figcaption data-lang=&#34;HTTP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token header&#34;&gt;&lt;span class=&#34;token header-name keyword&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token header-value&#34;&gt;//image.baidu.com/search/down?url=图片地址&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;进入 &lt;code&gt;hexo&lt;/code&gt;  -  &lt;code&gt;themes&lt;/code&gt;  -  &lt;code&gt;shoka&lt;/code&gt;  -  &lt;code&gt;scripts&lt;/code&gt;  -  &lt;code&gt;helpers&lt;/code&gt;   ，打开 &lt;code&gt;engine.js&lt;/code&gt;  文件&lt;/p&gt;
+&lt;p&gt;大概第 30 行，修改&lt;/p&gt;
+&lt;figure class=&#34;highlight js&#34;&gt;&lt;figcaption data-lang=&#34;JavaScript&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;token function-variable function&#34;&gt;parseImage&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token parameter&#34;&gt;img&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; size&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;img&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;startsWith&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;//&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;||&lt;/span&gt; img&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;startsWith&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;http&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; img&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;      &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;https://image.baidu.com/search/down?url=https://tva&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;randomServer&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;.sinaimg.cn/&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;size&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;/&#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;img&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;重新 &lt;code&gt;hexo clean&lt;/code&gt;   -&amp;gt;  &lt;code&gt;hexo g&lt;/code&gt;   -&amp;gt;  &lt;code&gt;hexo d&lt;/code&gt;  ，等待部署完成后问题得到解决&lt;/p&gt;
+&lt;h4 id=&#34;评论系统修复&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#评论系统修复&#34;&gt;#&lt;/a&gt; 评论系统修复&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Shoka&lt;/code&gt;  使用的魔改 &lt;code&gt;valine&lt;/code&gt;  ，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvTWluaVZhbGluZQ==&#34;&gt;GitHub&lt;/span&gt; 上显示上一次维护还是在三年前，在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb25zb2xlLmxlYW5jbG91ZC5hcHAv&#34;&gt; LeanCloud&lt;/span&gt; 注册国际版后，进入 &lt;code&gt;应用管理&lt;/code&gt;  -  &lt;code&gt;应用凭证&lt;/code&gt; 得到 &lt;code&gt;AppID&lt;/code&gt;  和 &lt;code&gt;AppKey&lt;/code&gt; ，填入 &lt;code&gt;Shoka&lt;/code&gt;  的 &lt;code&gt;_config.yml&lt;/code&gt;  中，&lt;/p&gt;
+&lt;p&gt;但是发现 &lt;code&gt;leanCloud&lt;/code&gt;  相关的接口都报错了，在 &lt;code&gt;应用管理&lt;/code&gt;  -  &lt;code&gt;安全中心&lt;/code&gt; 找到 &lt;code&gt;Web 安全域名&lt;/code&gt; ，将自己的域名填进去后，发现依然报错，查询后发现是 &lt;code&gt;REST API 服务器地址&lt;/code&gt; 不对，使用系统提供的 &lt;code&gt;AppID&lt;/code&gt;  前八位的域名也是没有效果。&lt;/p&gt;
+&lt;p&gt;直接在 &lt;code&gt;应用管理&lt;/code&gt;  -  &lt;code&gt;域名绑定&lt;/code&gt; 中添加域名&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518171418319.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;在域名解析管理后台添加 CNAME 验证通过后，在 &lt;code&gt;Shoka&lt;/code&gt;  的 &lt;code&gt;_config.yml&lt;/code&gt;  中找到 &lt;code&gt;valine&lt;/code&gt;  配置组，修改 &lt;code&gt;serverURLs&lt;/code&gt;  为我们的域名即可。&lt;/p&gt;
+</content>
+        <category term="折腾" scheme="https://log992.cn/categories/play/" />
+        <category term="博客" scheme="https://log992.cn/tags/%E5%8D%9A%E5%AE%A2/" />
+        <category term="Hexo" scheme="https://log992.cn/tags/Hexo/" />
+        <updated>2023-05-18T07:51:55.000Z</updated>
+    </entry>
     <entry>
         <id>https://log992.cn/android/%E6%97%A0%E6%84%9F%E9%87%8D%E8%BD%BDActivity/</id>
         <title>无感重载Activity</title>
@@ -1120,55 +1156,5 @@ targetSdkVersion 28
         <category term="Charles" scheme="https://log992.cn/tags/Charles/" />
         <category term="弱网" scheme="https://log992.cn/tags/%E5%BC%B1%E7%BD%91/" />
         <updated>2022-03-17T02:26:55.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://log992.cn/develop/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/</id>
-        <title>Json数据过大,手机无法正常解析?</title>
-        <link rel="alternate" href="https://log992.cn/develop/Json%E6%95%B0%E6%8D%AE%E8%BF%87%E5%A4%A7,%E6%89%8B%E6%9C%BA%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E8%A7%A3%E6%9E%90?/"/>
-        <content type="html">&lt;h4 id=&#34;为何会碰到这种问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#为何会碰到这种问题&#34;&gt;#&lt;/a&gt; 为何会碰到这种问题&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;一般 APP 在初始化的时候会从服务器获取一些基础数据，但是这些数据一般都不会很大，最多几百 KB 的数据而已，但是我最近碰到初始化数据有 35M 之多，直接导致 APP 解析超大 json 的时候崩溃掉.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&#34;解决办法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决办法&#34;&gt;#&lt;/a&gt; 解决办法&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;一般来说这种大量的基础数据是会直接存在本地的，但是此次处理的 APP 中确实需要从服务器拉取相应的初始化数据，为了解决这个问题，我尝试过使用 fastJson 来序列化 json (项目中使用的时 Gson 序列化), 但是毫无疑问不行&lt;/li&gt;
-&lt;li&gt;我们只能通过精简 json 的体量和分页处理数据来处理.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4 id=&#34;具体实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#具体实现&#34;&gt;#&lt;/a&gt; 具体实现&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;在第一次获取增量更新数据的时候将分页 0 传递&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;ArrayList&amp;lt;JPromiser&amp;gt; adjustQs = JPromiserWhereStack.newInstance().add(QbsSyncDomainService.syncAdjustmentDataN(context, adjustmentDataDate, 0))
-                .addWhere(&amp;quot;success&amp;quot;, getSyncAdjustQ(context, adjustmentDataDate)).getTask();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;拿到分页总数目&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;int pageCount = t.getContent().getPageCount();
-                        getWallet().putExtra(&amp;quot;pageCount&amp;quot;,pageCount);
-                        getPromiser().putWhere(&amp;quot;success&amp;quot;);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;在第一次调用成功后根据得到的分页信息进行下一步处理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;private Promiser getSyncAdjustQ(final Context context, final Date[] adjustmentDataDate)&amp;#123;
-        return new Promiser() &amp;#123;
-            @Override
-            protected void aync(Deffered&amp;lt;String, String&amp;gt; d) &amp;#123;
-                Integer pageCount =d.getWallet().getSafeInt(&amp;quot;pageCount&amp;quot;);
-                if (pageCount&amp;gt;1) &amp;#123;
-                    for (Integer i = 1; i &amp;lt; pageCount; i++) &amp;#123;
-                        Promiser promiser = QbsSyncDomainService.syncAdjustmentDataN(context, adjustmentDataDate, i);
-                        tasks.add(promiser);
-                    &amp;#125;
-                &amp;#125;
-                d.resolve();
-            &amp;#125;
-        &amp;#125;;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;分页数量大于 1 时继续添加分页请求，剩余几页就添加几次请求进去，保证所有的数据都能完整获取下来.&lt;/p&gt;
-</content>
-        <category term="开发" scheme="https://log992.cn/categories/develop/" />
-        <category term="Json" scheme="https://log992.cn/tags/Json/" />
-        <updated>2022-03-17T02:21:55.000Z</updated>
     </entry>
 </feed>
