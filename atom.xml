@@ -8,7 +8,82 @@
     <author>
       <name>Logan</name>
     </author>
-    <updated>2023-05-18T07:51:55.000Z</updated>
+    <updated>2023-05-19T03:34:55.000Z</updated>
+    <entry>
+        <id>https://log992.cn/play/Shoka%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
+        <title>Shoka主题基本操作</title>
+        <link rel="alternate" href="https://log992.cn/play/Shoka%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
+        <content type="html">&lt;h4 id=&#34;标签测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#标签测试&#34;&gt;#&lt;/a&gt; 标签测试&lt;/h4&gt;
+&lt;figure class=&#34;highlight tex&#34;&gt;&lt;figcaption data-lang=&#34;TeX&#34;&gt;&lt;span&gt;标签测试&lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvZzE5OTIuY24vcGxheS9TaG9rYSVFNCVCOCVCQiVFOSVBMiU5OCVFNSU5RiVCQSVFNiU5QyVBQyVFNiU5MyU4RCVFNCVCRCU5Qy8=&#34;&gt;测试链接&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;测试标签&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.label .default&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;测试标签&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.label .info&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;测试标签&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.label .primary&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;:heavy_check_mark:测试标签&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.label .success&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;测试标签&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.label .warning&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;测试标签&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.label .danger&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;:broken_heart:测试标签&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.label .danger&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;span class=&#34;label default&#34;&gt;测试标签&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label info&#34;&gt;测试标签&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label primary&#34;&gt;测试标签&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label success&#34;&gt;✔️测试标签&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label warning&#34;&gt;测试标签&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label danger&#34;&gt;测试标签&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label danger&#34;&gt;💔测试标签&lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&#34;链接块测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链接块测试&#34;&gt;#&lt;/a&gt; 链接块测试&lt;/h4&gt;
+&lt;figure class=&#34;highlight tex&#34;&gt;&lt;figcaption data-lang=&#34;TeX&#34;&gt;&lt;span&gt;链接块测试&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;
+{% links %}
+- site: #站点名称
+  owner: #管理员名字
+  url: #站点网址
+  desc: #简短描述
+  image: #一张图片
+  color: #颜色代码
+{% endlinks %}
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;Logan&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9sb2cxOTkyLmNuLw==&#34; data-background-image=&#34;https://image.log1992.com/avatar.jpg&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9sb2cxOTkyLmNuLw==&#34;&gt;空无之境&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;不忘初心，方得始终&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;
+&lt;h4 id=&#34;提醒块测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#提醒块测试&#34;&gt;#&lt;/a&gt; 提醒块测试&lt;/h4&gt;
+&lt;figure class=&#34;highlight tex&#34;&gt;&lt;figcaption data-lang=&#34;TeX&#34;&gt;&lt;span&gt;提醒块&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::default&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;默认默认&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::primary&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;基本基本&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::info&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;提示提示&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::success&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;成功成功&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::warning&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;警告警告&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::danger&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;危险危险&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::danger no-icon&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;危险危险&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;:::&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note default&#34;&gt;
+&lt;p&gt;默认默认&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;基本基本&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;提示提示&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note success&#34;&gt;
+&lt;p&gt;成功成功&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;警告警告&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note danger&#34;&gt;
+&lt;p&gt;危险危险&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note danger no-icon&#34;&gt;
+&lt;p&gt;危险危险&lt;/p&gt;
+&lt;/div&gt;
+&lt;h4 id=&#34;hexo-tag与markdown冲突&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-tag与markdown冲突&#34;&gt;#&lt;/a&gt; Hexo Tag 与 Markdown 冲突&lt;/h4&gt;
+&lt;p&gt;在代码块中写 Hexo 标签时，Hexo 标签的优先级会比代码块更高，导致代码块显示异常，在我的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sb2cxOTkyLmNuL3BsYXkvSGV4byVFOSU5NyVBRSVFOSVBMiU5OCVFNSVCRCU5MiVFNiU4MCVCQi8=&#34;&gt;前一篇文章&lt;/span&gt;中有写明，但是如何解决呢？&lt;/p&gt;
+&lt;p&gt;我们需要用到 &lt;code&gt;raw &lt;/code&gt; 和 &lt;code&gt; endraw&lt;/code&gt;  标签&lt;/p&gt;
+&lt;p&gt;例如&lt;/p&gt;
+&lt;figure class=&#34;highlight tex&#34;&gt;&lt;figcaption data-lang=&#34;TeX&#34;&gt;&lt;span&gt;Hexo Tag与Markdown冲突&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;
+{% raw %}
+{% links %}
+- site: 空无之境
+  owner: Logan
+  url: https://log1992.cn/
+  desc: 不忘初心，方得始终
+  image: https://image.log1992.com/avatar.jpg
+  color: #颜色代码
+{% endlinks %}
+{% endraw %}&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;这样包裹以后就可以直接在代码块中写 Hexo Tag 了&lt;/p&gt;
+&lt;h4 id=&#34;隐藏文字测试&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#隐藏文字测试&#34;&gt;#&lt;/a&gt; 隐藏文字测试&lt;/h4&gt;
+&lt;figure class=&#34;highlight tex&#34;&gt;&lt;figcaption data-lang=&#34;TeX&#34;&gt;&lt;span&gt;隐藏文字测试&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;!!黑幕黑幕黑幕黑幕黑幕黑幕!!： 鼠标滑过显示内容&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;!!模糊模糊模糊模糊模糊模糊!!&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;.bulr&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; ： 选中文字显示内容&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;黑幕黑幕黑幕黑幕黑幕黑幕&lt;/span&gt;： 鼠标滑过显示内容&lt;br /&gt;
+&lt;span class=&#34;spoiler bulr&#34; title=&#34;你知道得太多了&#34;&gt;模糊模糊模糊模糊模糊模糊&lt;/span&gt; ： 选中文字显示内容&lt;/p&gt;
+&lt;p&gt;鼠标滑过开奖：&lt;span class=&#34;spoiler&#34; title=&#34;你知道得太多了&#34;&gt;谢谢惠顾！&lt;/span&gt;&lt;br /&gt;
+选中开奖：&lt;span class=&#34;spoiler bulr&#34; title=&#34;你知道得太多了&#34;&gt;再来亿瓶！&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="折腾" scheme="https://log992.cn/categories/play/" />
+        <category term="Hexo" scheme="https://log992.cn/tags/Hexo/" />
+        <category term="Shoka" scheme="https://log992.cn/tags/Shoka/" />
+        <updated>2023-05-19T03:34:55.000Z</updated>
+    </entry>
     <entry>
         <id>https://log992.cn/play/Hexo%E9%97%AE%E9%A2%98%E5%BD%92%E6%80%BB/</id>
         <title>Hexo问题归总</title>
@@ -47,8 +122,8 @@
 &lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/uPic/image-20230518215916017.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
         <category term="折腾" scheme="https://log992.cn/categories/play/" />
-        <category term="Hexo" scheme="https://log992.cn/tags/Hexo/" />
         <category term="博客" scheme="https://log992.cn/tags/%E5%8D%9A%E5%AE%A2/" />
+        <category term="Hexo" scheme="https://log992.cn/tags/Hexo/" />
         <updated>2023-05-18T07:51:55.000Z</updated>
     </entry>
     <entry>
@@ -1121,46 +1196,5 @@ targetSdkVersion 28
         <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="Android studio" scheme="https://log992.cn/tags/Android-studio/" />
         <updated>2022-03-17T02:34:55.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://log992.cn/develop/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/</id>
-        <title>APP弱网测试之Charles</title>
-        <link rel="alternate" href="https://log992.cn/develop/APP%E5%BC%B1%E7%BD%91%E6%B5%8B%E8%AF%95%E4%B9%8BCharles/"/>
-        <content type="html">&lt;blockquote&gt;
-&lt;p&gt;在 APP 开发过程中，很多问题是在网络问题出现的时候暴露出来的，所以在上线前，很有必要进行弱网测试。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;工具charles&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#工具charles&#34;&gt;#&lt;/a&gt; 工具：Charles&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;手机或模拟器设置代理&lt;br /&gt;
-&lt;img data-src=&#34;https://image.log1992.com/2020/07/964315253.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Charles 开启代理功能&lt;br /&gt;
-&lt;img data-src=&#34;https://image.log1992.com/2020/07/657379769.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-勾选上 macOS 代理&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;进入【代理】- 【节流阀设置】 也叫 Throttle Setting&lt;br /&gt;
-&lt;img data-src=&#34;https://image.log1992.com/2020/07/2662076335.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/2020/07/1005585404.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-①勾选启用节流&lt;br /&gt;
-②可以选择针对特定的 host 进行节流&lt;br /&gt;
-③增加预设，这里我增加了一个弱网预设项，上传 30，下		行 15（这里我写反了）&lt;br /&gt;
-④最后确定保存就好了&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;最后开始调试 APP 吧&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;后面我们可以直接通过开关启用关闭节流功能&lt;br /&gt;
-&lt;img data-src=&#34;https://image.log1992.com/2020/07/4137416846.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-</content>
-        <category term="开发" scheme="https://log992.cn/categories/develop/" />
-        <category term="Charles" scheme="https://log992.cn/tags/Charles/" />
-        <category term="弱网" scheme="https://log992.cn/tags/%E5%BC%B1%E7%BD%91/" />
-        <updated>2022-03-17T02:26:55.000Z</updated>
     </entry>
 </feed>
