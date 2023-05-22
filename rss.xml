@@ -92,8 +92,8 @@
             <title>Hexo问题归总</title>
             <link>https://log992.cn/play/Hexo%E9%97%AE%E9%A2%98%E5%BD%92%E6%80%BB/</link>
             <category term="折腾" scheme="https://log992.cn/categories/play/" />
-            <category term="博客" scheme="https://log992.cn/tags/%E5%8D%9A%E5%AE%A2/" />
             <category term="Hexo" scheme="https://log992.cn/tags/Hexo/" />
+            <category term="博客" scheme="https://log992.cn/tags/%E5%8D%9A%E5%AE%A2/" />
             <pubDate>Thu, 18 May 2023 15:51:55 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;使用 GitHub 的 Pages 搭建了自己的博客并使用了 &lt;code&gt;Shoka&lt;/code&gt;  主题&lt;/p&gt;
@@ -558,9 +558,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://log992.cn/Java/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</guid>
+            <guid isPermalink="true">https://log992.cn/JAVA/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</guid>
             <title>Date清空时分秒</title>
-            <link>https://log992.cn/Java/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</link>
+            <link>https://log992.cn/JAVA/Date%E6%B8%85%E7%A9%BA%E6%97%B6%E5%88%86%E7%A7%92/</link>
             <category term="Java" scheme="https://log992.cn/categories/java/" />
             <category term="Java" scheme="https://log992.cn/tags/Java/" />
             <category term="Date" scheme="https://log992.cn/tags/Date/" />
@@ -710,24 +710,6 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
-            <title>Harmony问题汇总</title>
-            <link>https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
-            <category term="鸿蒙" scheme="https://log992.cn/categories/harmony/" />
-            <category term="Harmony" scheme="https://log992.cn/tags/Harmony/" />
-            <pubDate>Fri, 01 Apr 2022 13:49:55 +0800</pubDate>
-            <description><![CDATA[ &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;xml 中部分控件需要使用全包名，否则 &lt;code&gt;findComponentById&lt;/code&gt;  会查不到&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;ohos.agp.components.webengine.WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果直接使用&lt;/p&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;会查询不到改控件。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;未完待续...&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://log992.cn/harmony/%E5%88%9D%E5%AD%A6Harmony/</guid>
             <title>初学Harmony</title>
             <link>https://log992.cn/harmony/%E5%88%9D%E5%AD%A6Harmony/</link>
@@ -748,6 +730,24 @@
 &lt;p&gt;2.2  &lt;code&gt;deviceConfig&lt;/code&gt;  可以为空，目前我添加了可以使用 HTTP 协议请求网络。&lt;/p&gt;
 &lt;p&gt;2.3  &lt;code&gt;module&lt;/code&gt;  存储项目模块信息， &lt;code&gt;name&lt;/code&gt;  对应 &lt;code&gt;application&lt;/code&gt;  的 &lt;code&gt;name&lt;/code&gt; , 请求权限可以放在 &lt;code&gt;reqPermissions&lt;/code&gt;  节点中，普通权限直接使用 &lt;code&gt;name&lt;/code&gt;  获取即可，敏感权限需要配置请求的原因和使用场景。&lt;/p&gt;
 &lt;p&gt;2.4  &lt;code&gt;abilities&lt;/code&gt;  类似于 &lt;code&gt;activity&lt;/code&gt;  节点，所有的页面，服务，都可以放到这里，根据不同的 &lt;code&gt;type&lt;/code&gt;  确定当前的 &lt;code&gt;Ability&lt;/code&gt;  是什么类型， &lt;code&gt;page&lt;/code&gt; ， &lt;code&gt;service&lt;/code&gt; , &lt;code&gt;data&lt;/code&gt;  分别代表了不同作用的 &lt;code&gt;Ability&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;未完待续...&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</guid>
+            <title>Harmony问题汇总</title>
+            <link>https://log992.cn/harmony/Harmony%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</link>
+            <category term="鸿蒙" scheme="https://log992.cn/categories/harmony/" />
+            <category term="Harmony" scheme="https://log992.cn/tags/Harmony/" />
+            <pubDate>Fri, 01 Apr 2022 13:49:55 +0800</pubDate>
+            <description><![CDATA[ &lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;xml 中部分控件需要使用全包名，否则 &lt;code&gt;findComponentById&lt;/code&gt;  会查不到&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;ohos.agp.components.webengine.WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;如果直接使用&lt;/p&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;WebView&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;id&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;$+id:webView&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;height&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;ohos:&lt;/span&gt;width&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;match_parent&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;会查询不到改控件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;未完待续...&lt;/p&gt;
  ]]></description>
         </item>
