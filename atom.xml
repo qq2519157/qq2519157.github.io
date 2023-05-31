@@ -8,7 +8,35 @@
     <author>
       <name>Logan</name>
     </author>
-    <updated>2023-05-19T03:34:55.000Z</updated>
+    <updated>2023-05-31T01:31:55.000Z</updated>
+    <entry>
+        <id>https://log992.cn/android/%E5%8F%A6%E8%BE%9F%E8%B9%8A%E5%BE%84%E5%B1%8F%E8%94%BD%E6%88%AA%E5%9B%BE%E9%99%90%E5%88%B6/</id>
+        <title>另辟蹊径屏蔽截图限制</title>
+        <link rel="alternate" href="https://log992.cn/android/%E5%8F%A6%E8%BE%9F%E8%B9%8A%E5%BE%84%E5%B1%8F%E8%94%BD%E6%88%AA%E5%9B%BE%E9%99%90%E5%88%B6/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;先前有个项目代码需要做代码审计，因此将大部分代码打包成 &lt;code&gt;library&lt;/code&gt;  调用了，包括 &lt;code&gt;BaseActivity&lt;/code&gt; , 项目当时做等保，屏蔽了截图功能，目前需要恢复.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;屏蔽截图&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#屏蔽截图&#34;&gt;#&lt;/a&gt; 屏蔽截图&lt;/h4&gt;
+&lt;p&gt;首先讲如何屏蔽截图，一般只需要针对 &lt;code&gt;Activity&lt;/code&gt;  设置 Flag 为 &lt;code&gt;FLAG_SECURE&lt;/code&gt;  即可&lt;/p&gt;
+&lt;p&gt;我们选择在 &lt;code&gt;BaseActivity&lt;/code&gt;  的 &lt;code&gt;onCreate&lt;/code&gt;  方法中处理，这样所有继承的子类都实现了屏蔽截图.&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;protected&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Nullable&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Bundle&lt;/span&gt; savedInstanceState&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;onCreate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;savedInstanceState&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token function&#34;&gt;getWindow&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;addFlags&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;WindowManager&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;LayoutParams&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;FLAG_SECURE&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;此时再截图就会提示 “当前界面涉及隐私内容，不允许截屏”&lt;/p&gt;
+&lt;h4 id=&#34;解除截屏限制&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解除截屏限制&#34;&gt;#&lt;/a&gt; 解除截屏限制&lt;/h4&gt;
+&lt;p&gt;解除方法很简单，直接去掉上述 Flag 即可，但是目前的项目存在的问题是 &lt;code&gt;BaseActivity&lt;/code&gt;  在 &lt;code&gt;library&lt;/code&gt;  中，没有办法直接修改 &lt;code&gt;aar&lt;/code&gt;  中的代码，或者说修改 &lt;code&gt;aar&lt;/code&gt;  中的代码太麻烦了，那么有没有更简单的方法呢？答案是有的：&lt;/p&gt;
+&lt;p&gt;在我的 &lt;code&gt;Application&lt;/code&gt;  中有用到这样一行代码&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;registerActivityLifecycleCallbacks&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;activityLifecycleCallbacks&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注册了所有 &lt;code&gt;activity&lt;/code&gt;  的生命周期监听，可以用来处理应用切换到前台后台的监听，做一些诸如判断网络状态重连等。&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ActivityLifecycleCallbacks&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityCreated&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Bundle&lt;/span&gt; savedInstanceState&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityStarted&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityResumed&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityPaused&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityStopped&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivitySaveInstanceState&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Bundle&lt;/span&gt; outState&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityDestroyed&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;既然如此，我们直接在 &lt;code&gt;onActivityCreated&lt;/code&gt;  的时候处理不就行了吗？&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityCreated&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Bundle&lt;/span&gt; savedInstanceState&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            activity&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getWindow&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;clearFlags&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;WindowManager&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;LayoutParams&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;FLAG_SECURE&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;事实证明，并非如此。 &lt;code&gt;onActivityCreated&lt;/code&gt;  确实会在 &lt;code&gt;onCreate&lt;/code&gt;  之后调用，但是却是在 &lt;code&gt;super.onCreate(savedInstanceState);&lt;/code&gt;  之后就已经调用了，我们的 &lt;code&gt;addFlags&lt;/code&gt;  代码是在其后面写的，所以整个流程是&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label&#34;&gt;onCreate 的 super.onCreate&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label warning&#34;&gt;onActivityCreated 的 clearFlags&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;label danger&#34;&gt;onCreate 的 addFlags&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;顺序不对，自然无法生效，所以我们只能在 &lt;code&gt;onActivityStarted&lt;/code&gt;  中处理了&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;onActivityStarted&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Activity&lt;/span&gt; activity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token comment&#34;&gt;// 无法编辑 lib 中的 QFLibBaseActivity，直接在这里处理&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            activity&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getWindow&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;clearFlags&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;WindowManager&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;LayoutParams&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;FLAG_SECURE&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;activityCount &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                isForeground &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token class-name&#34;&gt;INSLog&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;logan&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;app回到前台,开始更新状态&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token class-name&#34;&gt;Intent&lt;/span&gt; intent &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Intent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                intent&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setAction&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;QFMainActivity&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;ACTION_REFRESH_NETWORK_STATE&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token function&#34;&gt;sendBroadcast&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;intent&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            activityCount&lt;span class=&#34;token operator&#34;&gt;++&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后我们就能正常截图了。&lt;/p&gt;
+</content>
+        <category term="Android" scheme="https://log992.cn/categories/android/" />
+        <category term="Activity" scheme="https://log992.cn/tags/Activity/" />
+        <category term="屏蔽截图" scheme="https://log992.cn/tags/%E5%B1%8F%E8%94%BD%E6%88%AA%E5%9B%BE/" />
+        <updated>2023-05-31T01:31:55.000Z</updated>
+    </entry>
     <entry>
         <id>https://log992.cn/play/Shoka%E4%B8%BB%E9%A2%98%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</id>
         <title>Shoka主题基本操作</title>
@@ -1062,139 +1090,6 @@ targetSdkVersion 28
 </content>
         <category term="Android" scheme="https://log992.cn/categories/android/" />
         <category term="onActivityResult" scheme="https://log992.cn/tags/onActivityResult/" />
-        <updated>2022-03-17T02:34:55.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://log992.cn/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/</id>
-        <title>莫名其妙的TransactionTooLargeException</title>
-        <link rel="alternate" href="https://log992.cn/android/%E8%8E%AB%E5%90%8D%E5%85%B6%E5%A6%99%E7%9A%84TransactionTooLargeException/"/>
-        <content type="html">&lt;h3 id=&#34;错误&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#错误&#34;&gt;#&lt;/a&gt; 错误&lt;/h3&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/blog/typecho/20220121104348.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;最近将某个老项目升级到 AndroidX，并且在将 minSdk 由 19 提升至 24，targetSdk 由 23 提升至 28 后，在某个数据量较大的场景出现了上述错误。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原因&#34;&gt;#&lt;/a&gt; 原因&lt;/h3&gt;
-&lt;p&gt;该问题出现在有一个界面跳转到另一个界面时，大概含义就是传递的数据量过大，超过了限制。分析抛出的原因或条件，查看源码 android_util_binder.cpp，查看系统层在什么情况下会抛出 TransactionTooLargeException 可知在 binder 驱动处理失败后，如果传输的 parcel 体积超过 200kb，则会抛出 TransactionTooLargeException，因此引发该问题的原因是 binder 调用传输的数据太大导致，问题分析重点应侧重 binder 数据传输。&lt;/p&gt;
-&lt;h3 id=&#34;解决&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决&#34;&gt;#&lt;/a&gt; 解决&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;查看代码后发现，项目中在跳转时并未携带过多数据&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;Intent intent = new Intent(context, TestDetectionEditTabInnerActivity.class);
-                    intent.putExtra(NavigationViewDataInitHelper.TYPE_CODE, editViewModel.getFieldType());
-                    intent.putExtra(TestDetectionEditTabInnerActivity.RECORD_VALUE, editViewModel.getValue());
-                    intent.putExtra(TestDetectionEditTabInnerActivity.PROJECT_NAME, editViewModel.getName());
-                    intent.putExtra(NavigationViewDataInitHelper.FUNCTION_IDENTIFICATION, functionIdentification);
-                    fragment.startActivityForResult(intent, Constants.REQUEST_CODE);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;其中&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;editViewModel.getFieldType()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;editViewModel.getValue()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;editViewModel.getName()
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以及&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;functionIdentification
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;都是 &lt;code&gt;String&lt;/code&gt;  类型的数据，并且数据长度都不大。 综合实际排错过程中的操作，只有在一个内嵌的 &lt;code&gt;fragment&lt;/code&gt;  数据加载时才会出现上述错误，那我们先去 &lt;code&gt;fragment&lt;/code&gt;  中看下：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;@Override
-    public Bundle createBundle(QFormViewModel viewModel, ExpandFormSchemaModel dataModel) &amp;#123;
-        Bundle bundle = new Bundle();
-        bundle.putString(INTENT_SMART_INPUT_FRAGMENT_SOURCE, dataModel.getDataSource());
-        mParamValidators = dataModel.getParamValidators();
-        mDatasourceKey = dataModel.getDatasourceKey();
-        mJsonBody = dataModel.getJsonBody();
-        mListSource = dataModel.getListSource();
-        mFunctionIdentification = dataModel.getFunctionIdentification();
-        return bundle;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;好家伙，先把这个 bundle 干掉再说&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;@Override
-    public Bundle createBundle(QFormViewModel viewModel, ExpandFormSchemaModel dataModel) &amp;#123;
-        mParamValidators = dataModel.getParamValidators();
-        mDatasourceKey = dataModel.getDatasourceKey();
-        mJsonBody = dataModel.getJsonBody();
-        mListSource = dataModel.getListSource();
-        mFunctionIdentification = dataModel.getFunctionIdentification();
-        return null;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;重新编译运行，发现还是 GG&lt;/p&gt;
-&lt;ol start=&#34;2&#34;&gt;
-&lt;li&gt;那么说明还有其他的地方有大量数据被带入到跳转时候的 &lt;code&gt;binder&lt;/code&gt;  中。 回到先前跳转的地方，我们发现 &lt;code&gt;startActivityForResult&lt;/code&gt;  的地方居然是用的 &lt;code&gt;fragment&lt;/code&gt; ，原来在这儿呢，看到上面的 &lt;code&gt;context&lt;/code&gt;  直接就是一个 &lt;code&gt;activity&lt;/code&gt;  引用，直接使用 &lt;code&gt;context.startActivityForResult&lt;/code&gt; , 果然重新验证后没有出现数据传递超过限制的问题了，看来问题就在这个 &lt;code&gt;fragment&lt;/code&gt;  中。&lt;/li&gt;
-&lt;li&gt;来到这个 &lt;code&gt;fragment&lt;/code&gt;  中&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;public static TestDetectionEditTabFragment newInstance(
-            List&amp;lt;TestDetectionEditViewModel&amp;gt; models,
-            String recordId,
-            String functionIdentification,
-            String type, String projectName, String defaultValue) &amp;#123;
-        Bundle args = new Bundle();
-        args.putParcelableArrayList(MODELS, (ArrayList&amp;lt;? extends Parcelable&amp;gt;) models);
-        args.putString(RECORD_ID, recordId);
-        args.putString(FUNCTION_IDENTIFICATION, functionIdentification);
-        args.putString(TYPE, type);
-        args.putString(PROJECT_NAME, projectName);
-        args.putString(DEFAULT_VALUE, defaultValue);
-        TestDetectionEditTabFragment fragment = new TestDetectionEditTabFragment();
-        fragment.setArguments(args);
-        return fragment;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;我们看到在静态方法中往 &lt;code&gt;Bundle&lt;/code&gt;  中塞入了很多的数据，这些数据在先前 &lt;code&gt;startActivityForResult&lt;/code&gt;  的时候就是作为引用 &lt;code&gt;context&lt;/code&gt;  包含在 &lt;code&gt;binder&lt;/code&gt;  中。&lt;br /&gt;
-找到 &lt;code&gt;Bundle&lt;/code&gt;  数据获取完的地方，对 &lt;code&gt;Bundle&lt;/code&gt;  实施 &lt;code&gt;clear&lt;/code&gt;  方法。一般是 &lt;code&gt;onViewCreated&lt;/code&gt;  方法中，我这里是自己定义的方法。&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;@Override
-    protected void iData(View view) &amp;#123;
-        Bundle arguments = getArguments();
-        if (arguments != null) &amp;#123;
-            models = arguments.getParcelableArrayList(MODELS);
-            recordId = arguments.getString(RECORD_ID);
-            functionIdentification = arguments.getString(FUNCTION_IDENTIFICATION);
-            type = arguments.getString(TYPE);
-            projectName = arguments.getString(PROJECT_NAME);
-            defaultValue = arguments.getString(DEFAULT_VALUE);
-            setAdapter(models);
-            arguments.clear();
-        &amp;#125;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://image.log1992.com/blog/typecho/20220121051734.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;改完后发现影响了其他功能&lt;br /&gt;
-&lt;img data-src=&#34;https://image.log1992.com/blog/typecho/20220121051925.png&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-原来项目中针对 &lt;code&gt;fragment&lt;/code&gt;  专门处理了 &lt;code&gt;onActivityResult&lt;/code&gt; ，导致重新进入的时候 &lt;code&gt;Bundle&lt;/code&gt;  中的数据获取不到引起了其他的错误。&lt;br /&gt;
-最后，直接在需要传值的地方，将数据传递给成员变量&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;public static TestDetectionEditTabFragment newInstance(
-            List&amp;lt;TestDetectionEditViewModel&amp;gt; models,
-            String recordId,
-            String functionIdentification,
-            String type, String projectName, String defaultValue) &amp;#123;
-        Bundle args = new Bundle();
-        args.putString(RECORD_ID, recordId);
-        args.putString(FUNCTION_IDENTIFICATION, functionIdentification);
-        args.putString(TYPE, type);
-        args.putString(PROJECT_NAME, projectName);
-        args.putString(DEFAULT_VALUE, defaultValue);
-        TestDetectionEditTabFragment fragment = new TestDetectionEditTabFragment();
-        fragment.setArguments(args);
-        fragment.setModels(models);
-        return fragment;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;通过 &lt;code&gt;set&lt;/code&gt;  方法直接赋值&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;public void setModels(List&amp;lt;TestDetectionEditViewModel&amp;gt; models)&amp;#123;
-        this.models = models;
-    &amp;#125;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;总结&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#总结&#34;&gt;#&lt;/a&gt; 总结&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;处理 &lt;code&gt;TransactionTooLargeException&lt;/code&gt;  的根本还是要针对数据传输做优化，要么使用类似 &lt;code&gt;EventBus&lt;/code&gt;  的方法，要么使用成员变量直接赋值，避开通过 &lt;code&gt;Bundle&lt;/code&gt;  传值这个坑。&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-        <category term="Android" scheme="https://log992.cn/categories/android/" />
-        <category term="Android studio" scheme="https://log992.cn/tags/Android-studio/" />
         <updated>2022-03-17T02:34:55.000Z</updated>
     </entry>
 </feed>
